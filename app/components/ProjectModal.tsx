@@ -63,7 +63,7 @@ export default function ProjectModal(props: ProjectModalProps) {
                         )}
                         <a href={project.liveUrl} target="_blank">
                             <button
-                                className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                className={`${project.liveUrl ? 'bg-emerald-500 text-white' : 'bg-gray-200 text-white cursor-not-allowed'} active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150`}
                                 type="button"
                             >
                                 Live Demo
