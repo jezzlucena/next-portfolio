@@ -5,6 +5,7 @@ import { PortfolioProject } from './project';
 import GridProject from './components/GridProject';
 import { useState } from 'react';
 import ProjectModal from './components/ProjectModal';
+import NavigationBar from './components/NavigationBar';
 
 const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
     "multiverse": {
@@ -21,7 +22,7 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         liveUrl: "https://multiverse.campcelestialbodies.org/"
     },
     "climatempo": {
-        name: "Climatempo Weather Forecast",
+        name: "Climatempo Forecast",
         companyName: "HXD Smart Solutions",
         year: "2012",
         role: "Full Stack Engineer (Intern)",
@@ -47,7 +48,7 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         videoLinkUrl: "https://youtu.be/McDy33GSPUM",
     },
     "thermofisher": {
-        name: "Thermo Fisher - Precision Medicine",
+        name: "Thermo Fisher Precision Medicine",
         companyName: "Kaon Interactive",
         year: "2018",
         role: "Lead Full Stack Engineer (Contract)",
@@ -103,7 +104,7 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         liveUrl: "http://www.kaon.com/"
     },
     "dxma": {
-        name: "DxMA Awards 2016 Catalog",
+        name: "DxMA '16 Catalog",
         companyName: "Kaon Interactive",
         year: "2016",
         role: "Full Stack Engineer",
@@ -195,7 +196,7 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         githubUrl: "https://github.com/jezzlucena/pong_4x",
     },
     "bandip": {
-        name: "Band IP",
+        name: "Bandplay",
         companyName: "HXD Smart Solutions",
         year: "2013",
         role: "Full Stack Engineer",
@@ -215,7 +216,7 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
             <div className="w-full text-right">by Jezz Lucena</div>
         
-            <div className="mt-10 relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+            <div className="mt-1 relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
                 <Image
                     className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                     src="/logo.png"
@@ -239,6 +240,8 @@ export default function Home() {
                     }
                 )}
             </div>
+
+            <NavigationBar />
             
             {selectedProject ? 
                 <ProjectModal
