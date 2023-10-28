@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { PortfolioProject } from '../project';
 
 export type ProjectModalProps = {
@@ -26,9 +27,30 @@ export default function ProjectModal(props: ProjectModalProps) {
                         </button>
                     </div>
                     <div className="relative p-6 flex-auto">
+                        {project.thumbVideoUrl ? 
+                            <video autoPlay loop muted className="bg-slate-500 w-6/12 m-auto">
+                                <source src={project.thumbVideoUrl} />
+                            </video>
+                        : <Image
+                            className="m-auto mb-4 relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+                            src={project.thumbImgUrl}
+                            alt="Logo"
+                            height={380}
+                            width={380}
+                            priority
+                        />
+                        }
                         <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
                             {project.description}
                         </p>
+
+                        <span className="leading-10 text-xs">
+                            <span className="label">Stack: </span>
+                            {project.stack.map(techName => {
+                                return <><span className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3">{techName}</span><span>, </span></>
+                            })}
+                            <span className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3">JavaScript</span><span>, </span>
+                        </span>
                     </div>
                     <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                         {project.videoLinkUrl && (
@@ -47,7 +69,7 @@ export default function ProjectModal(props: ProjectModalProps) {
                                     className="active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                     type="button"
                                 >
-                                    View GitHub
+                                    View on GitHub
                                 </button>
                             </a>
                         )}
@@ -57,7 +79,7 @@ export default function ProjectModal(props: ProjectModalProps) {
                                     className="active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                     type="button"
                                 >
-                                    View Behance
+                                    View on Behance
                                 </button>
                             </a>
                         )}
