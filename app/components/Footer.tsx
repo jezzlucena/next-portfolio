@@ -5,11 +5,11 @@ export default function Footer() {
     return (<>
         <div className="w-full mt-6 border-t-2">
             <div className="text-center mt-6">
-                <a className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3 mx-2" target="_blank" href="https://linkedin.com/in/jezzlucena">View LinkedIn</a>
-                <a className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3 mx-2" target="_blank" href="/resource/JezzLucenaResume2023.pdf">View Resumé</a>
+                <a className="whitespace-nowrap hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-500 bg-white border border-gray-700 py-2 px-3 mx-2" target="_blank" href="https://linkedin.com/in/jezzlucena">View LinkedIn</a>
+                <a className="whitespace-nowrap hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-500 bg-white border border-gray-700 py-2 px-3 mx-2" target="_blank" href="/resource/JezzLucenaResume2023.pdf">View Resumé</a>
                 <br/>
                 <br/>
-                <a className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3 mx-2" href="mailto:jezzlucena@gmail.com">Email Me (jezzlucena@gmail.com)</a>
+                <a className="whitespace-nowrap hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-500 bg-white border border-gray-700 py-2 px-3 mx-2" href="mailto:jezzlucena@gmail.com">Email Me (jezzlucena@gmail.com)</a>
                 <br/>
                 <br/>
             </div>

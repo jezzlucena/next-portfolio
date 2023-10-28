@@ -12,7 +12,7 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <title>Jezz's Portfolio</title>
-                <link rel="shortcut icon" href="favicon.png" />
+                <link rel="shortcut icon" href="/img/common/favicon.png" />
                 <meta name="description" content="A collection of screencaps, videos, and live demos of UI/UX projects programmed by Jezz Lucena."/>
 
                 <meta property="og:title" content="Portfolio - Jezz Lucena"/>
