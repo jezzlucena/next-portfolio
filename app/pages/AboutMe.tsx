@@ -39,7 +39,13 @@ export default function AboutMe() {
 							<span className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3">i18n</span>
 						</span>
 						<div className="mt-5 text-center">
-							<a href="/resource/JezzLucenaResume2023.pdf" target="_blank" className="px-10 hover:border-gray-700 hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-700 py-2 px-3 leading-10">Download Resumé (pdf)</a>
+							<a 
+								href="/resource/JezzLucenaResume2023.pdf"
+								target="_blank"
+								className="text-lg px-20 py-4 hover:border-gray-700 hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-700 py-2 px-3 leading-10"
+							>
+								View Resumé
+							</a>
 						</div>
 					</div>
 				</div>
