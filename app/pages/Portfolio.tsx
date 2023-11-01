@@ -38,12 +38,11 @@ export default function Portfolio() {
             </div>
         
             <div className="mt-24 mb-32 grid text-center md:text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 md:grid-cols-2 lg:text-left">
-                {projects ? Object.entries(projects).map(
-                    ([key, project]) => {
+                {projects ? projects.map(project => {
                         return (
                             <GridProject
                                 project={project}
-                                key={key}
+                                key={project.key}
                                 onClick={() => setSelectedProject(project)}
                             />
                         );

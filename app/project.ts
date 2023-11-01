@@ -1,4 +1,6 @@
 export type PortfolioProject = {
+    _id: string;
+    key: string;
     name: string;
     companyName: string;
     year: string;

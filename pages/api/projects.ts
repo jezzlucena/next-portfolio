@@ -1,8 +1,9 @@
 import { PortfolioProject } from "@/app/project";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
-    "multiverse": {
+const PORTFOLIO_PROJECTS: PortfolioProject[] = [
+    {
+        key: "multiverse",
         name: "Burning Man: Multiverse",
         companyName: "Celestial Bodies Camp",
         year: "2020",
@@ -15,7 +16,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         videoLinkUrl: "https://youtu.be/niPZFy9t9b0",
         liveUrl: "https://multiverse.campcelestialbodies.org/"
     },
-    "climatempo": {
+    {
+        key: "climatempo",
         name: "Climatempo Forecast",
         companyName: "HXD Smart Solutions",
         year: "2012",
@@ -27,7 +29,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         thumbGifUrl: "/img/portfolio/climatempo/climatempo_0.gif",
         behanceUrl: "https://www.behance.net/gallery/74097271/Climatempo-Weather-Forecast",
     },
-    "dell": {
+    {
+        key: "dell",
         name: "Dell OME Training Game",
         companyName: "Kaon Interactive",
         year: "2018",
@@ -41,7 +44,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         behanceUrl: "https://www.behance.net/gallery/74097417/Dell-OME-Gamified-Experience",
         videoLinkUrl: "https://youtu.be/McDy33GSPUM",
     },
-    "thermofisher": {
+    {
+        key: "thermofisher",
         name: "Thermo Fisher Precision Medicine",
         companyName: "Kaon Interactive",
         year: "2018",
@@ -55,7 +59,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         behanceUrl: "https://www.behance.net/gallery/74097771/Thermo-Fisher-Precision-Medicine",
         videoLinkUrl: "https://youtu.be/JUgZ73YrFKs",
     },
-    "abbott": {
+    {
+        key: "abbott",
         name: "Abbott Transformation",
         companyName: "Kaon Interactive",
         year: "2016",
@@ -69,7 +74,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         behanceUrl: "https://www.behance.net/gallery/74096955/Abbott-Transformation",
         videoLinkUrl: "https://youtu.be/CLGU7GhBO0k",
     },
-    "strikeapose": {
+    {
+        key: "strikeapose",
         name: "Strike A Pose",
         companyName: "Personal Project",
         year: "2020",
@@ -82,7 +88,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         videoLinkUrl: "https://youtu.be/zbpl4O8iWtE",
         liveUrl: "https://strike-a-pose.herokuapp.com/"
     },
-    "kaon": {
+    {
+        key: "kaon",
         name: "Kaon.com",
         companyName: "Kaon Interactive",
         year: "2017",
@@ -97,7 +104,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         videoLinkUrl: "https://youtu.be/2RX7FPld2lI",
         liveUrl: "http://www.kaon.com/"
     },
-    "dxma": {
+    {
+        key: "dxma",
         name: "DxMA '16 Catalog",
         companyName: "Kaon Interactive",
         year: "2016",
@@ -111,7 +119,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         behanceUrl: "https://www.behance.net/gallery/74097473/DxMA-Awards-Catalog",
         videoLinkUrl: "https://youtu.be/aQ6I_z8w9vo",
     },
-    "f5": {
+    {
+        key: "f5",
         name: "F5 Hybrid Cloud",
         companyName: "Kaon Interactive",
         year: "2016",
@@ -126,7 +135,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         videoLinkUrl: "https://youtu.be/Bp1X9JAe0VE",
         liveUrl: "http://m.kaon.com/c/f5"
     },
-    "hyundai": {
+    {
+        key: "hyundai",
         name: "Hyundai HB20s Launch",
         companyName: "HXD Smart Solutions",
         year: "2013",
@@ -138,7 +148,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         thumbGifUrl: "/img/portfolio/hyundai/hyundai_0.gif",
         behanceUrl: "https://www.behance.net/gallery/74097571/Hyundai-HB20s-Launch",
     },
-    "photobooth": {
+    {
+        key: "photobooth",
         name: "Photobooth",
         companyName: "Personal Project",
         year: "2019",
@@ -151,7 +162,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         videoLinkUrl: "https://youtu.be/N8bxdOAP8Aw",
         liveUrl: "https://face-api-photobooth.herokuapp.com/"
     },
-    "haystack": {
+    {
+        key: "haystack",
         name: "In a Haystack",
         companyName: "Worcester Polytechnic Institute",
         year: "2016",
@@ -164,7 +176,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         behanceUrl: "https://www.behance.net/gallery/74097641/In-a-Haystack",
         liveUrl: "http://www.jezzlucena.com/in-a-haystack/"
     },
-    "cocacola": {
+    {
+        key: "cocacola",
         name: "Coca-Cola FM",
         companyName: "HXD Smart Solutions",
         year: "2012",
@@ -176,7 +189,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         thumbGifUrl: "/img/portfolio/coca-cola/coca_0.gif",
         behanceUrl: "https://www.behance.net/gallery/74097365/Coca-Cola-FM",
     },
-    "pong4x": {
+    {
+        key: "pong4x",
         name: "Pong! 4X",
         companyName: "Independent Project",
         year: "2014",
@@ -189,7 +203,8 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         behanceUrl: "https://www.behance.net/gallery/74097689/Pong-4X",
         githubUrl: "https://github.com/jezzlucena/pong_4x",
     },
-    "bandip": {
+    {
+        key: "bandip",
         name: "Bandplay",
         companyName: "HXD Smart Solutions",
         year: "2013",
@@ -201,45 +216,45 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
         thumbGifUrl: "/img/portfolio/band-ip/band_0.gif",
         behanceUrl: "https://www.behance.net/gallery/74097179/Band-IP",
     }
-};
+];
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    res.status(200).json(PORTFOLIO_PROJECTS);
-}
-
-// import { MongoClient, ObjectId } from 'mongodb';
-    
-// export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-//     const client = new MongoClient(process.env.MONGODB_URI || '');
-
-//     await client.connect();
-//     const db = client.db();
-
-//     switch (req.method) {
-//     case 'GET':
-//         const projects = await db.collection('projects').find({}).toArray();
-//         res.status(200).json(projects);
-//         break;
-//     case 'POST':
-//         const newPost = req.body;
-//         const postResult = await db.collection('projects').insertOne(newPost);
-//         res.status(201).json(postResult);
-//         break;
-//     case 'PUT':
-//         const { id, ...data } = req.body;
-//         const putResult = await db.collection('projects').updateOne(
-//             { _id: new ObjectId(id) },
-//             { $set: data }
-//         );
-//         res.status(200).json(putResult);
-//         break;
-//     case 'DELETE':
-//         const deleteResult = await db.collection('projects').deleteOne({
-//             _id: new ObjectId(req.body.id),
-//         });
-//         res.status(200).json(deleteResult);
-//         break;
-//     }
-
-//     await client.close();
+// export default function handler(req: NextApiRequest, res: NextApiResponse) {
+//     res.status(200).json(PORTFOLIO_PROJECTS);
 // }
+
+import { MongoClient, ObjectId } from 'mongodb';
+    
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    const client = new MongoClient(process.env.MONGODB_URI || '');
+
+    await client.connect();
+    const db = client.db();
+
+    switch (req.method) {
+    case 'GET':
+        const projects = await db.collection('projects').find({}).toArray();
+        res.status(200).json(projects);
+        break;
+    case 'POST':
+        const newProject = req.body;
+        const postResult = await db.collection('projects').insertOne(newProject);
+        res.status(201).json(postResult);
+        break;
+    case 'PUT':
+        const { id, ...data } = req.body;
+        const putResult = await db.collection('projects').updateOne(
+            { _id: new ObjectId(id) },
+            { $set: data }
+        );
+        res.status(200).json(putResult);
+        break;
+    case 'DELETE':
+        const deleteResult = await db.collection('projects').deleteOne({
+            _id: new ObjectId(req.body.id),
+        });
+        res.status(200).json(deleteResult);
+        break;
+    }
+
+    await client.close();
+}
