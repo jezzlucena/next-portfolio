@@ -1,5 +1,5 @@
 export type PortfolioProject = {
-    _id: string;
+    _id?: string;
     key: string;
     name: string;
     companyName: string;
