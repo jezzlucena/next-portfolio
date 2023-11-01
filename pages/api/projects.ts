@@ -206,3 +206,40 @@ const PORTFOLIO_PROJECTS: { [ id: string ]: PortfolioProject } = {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(PORTFOLIO_PROJECTS);
 }
+
+// import { MongoClient, ObjectId } from 'mongodb';
+    
+// export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+//     const client = new MongoClient(process.env.MONGODB_URI || '');
+
+//     await client.connect();
+//     const db = client.db();
+
+//     switch (req.method) {
+//     case 'GET':
+//         const projects = await db.collection('projects').find({}).toArray();
+//         res.status(200).json(projects);
+//         break;
+//     case 'POST':
+//         const newPost = req.body;
+//         const postResult = await db.collection('projects').insertOne(newPost);
+//         res.status(201).json(postResult);
+//         break;
+//     case 'PUT':
+//         const { id, ...data } = req.body;
+//         const putResult = await db.collection('projects').updateOne(
+//             { _id: new ObjectId(id) },
+//             { $set: data }
+//         );
+//         res.status(200).json(putResult);
+//         break;
+//     case 'DELETE':
+//         const deleteResult = await db.collection('projects').deleteOne({
+//             _id: new ObjectId(req.body.id),
+//         });
+//         res.status(200).json(deleteResult);
+//         break;
+//     }
+
+//     await client.close();
+// }
