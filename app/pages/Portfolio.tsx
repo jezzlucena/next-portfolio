@@ -14,7 +14,8 @@ export default function Portfolio() {
     };
 
     useEffect(() => {
-        fetchProjects();
+        if (!projects)
+            fetchProjects();
     });
 
     const [selectedProject, setSelectedProject] = useState<PortfolioProject>();

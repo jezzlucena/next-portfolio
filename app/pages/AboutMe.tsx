@@ -94,7 +94,8 @@ export default function AboutMe() {
                         <div className="w-full text-right">
                             <a href="https://www.linkedin.com/in/chaima-jemmali-732a7655/" target="_blank">
                                 <div className="author">Chaima Jemmali</div>
-                                <div className="role">PhD Researcher at Northeastern University</div>
+                                <div className="role">Former PhD Researcher at Northeastern University</div>
+                                <div className="role">Current Gameplay Engineer at Ubisoft</div>
                             </a>
                             <div className="connection">Jezz and Chaima were grad students together at Worcester Polytechnic Institute</div>
 					    </div>
