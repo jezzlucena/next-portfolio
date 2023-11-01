@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function AboutMe() {
     return (<>
-        <div className="mt-1 relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+        <div className="mt-6 relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
             <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
                 src="/img/common/memoji.png"
@@ -42,7 +42,7 @@ export default function AboutMe() {
 							<a 
 								href="/resource/JezzLucenaResume2023.pdf"
 								target="_blank"
-								className="text-lg px-20 py-4 hover:border-gray-700 hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-500 py-2 px-3 leading-10"
+								className="text-lg px-6 py-4 hover:border-gray-700 hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-500 py-2 px-3 leading-10"
 							>
 								View Resumé
 							</a>
@@ -50,7 +50,7 @@ export default function AboutMe() {
 					</div>
 				</div>
                 <p className="pt-10 indent-10">Building magical end-user experiences is my true passion. I actively seek out new technologies, and stay up-to-date on the industry's most recent frameworks, languages and trends.</p>
-				<details className="pb-10">
+				<details className="pb-10 indent-10 cursor-pointer">
 					<p className="indent-10">With a Bachelor’s degree in Computer Engineering and a Master’s degree in Interactive Media & Game Development, continued education has allowed me to stay ahead of the curve and deliver exceptional work to each employer I’ve worked for - both full-time and contract.</p>
 					<p className="indent-10">My technical expertise includes cross-platform proficiency (Mac OS, Unix, Linux and Windows); expertise in 13 scripting/programming languages (including ES6, CSS3, HTML5, Phoenix/Elixir and PostgreSQL); and advanced knowledge of developer applications, tools, methodologies and best practices (including OOD, client/server architecture and self-test automation).</p>
 				</details>
@@ -66,8 +66,8 @@ export default function AboutMe() {
 						</div>
                         <div className="mt-10 w-full text-right">
                             <a href="https://www.linkedin.com/in/chrisebennett/" target="_blank">
-                                <div className="author">Chris Bennet</div>
-                                <div className="role">CEO at Wonderschool, Inc.</div>
+                                <div className="underline">Chris Bennet</div>
+                                <div className="underline">CEO at Wonderschool, Inc.</div>
                             </a>
 						    <div className="connection">Chris was senior to Jezz at Wonderschool</div>
                         </div>
@@ -80,8 +80,8 @@ export default function AboutMe() {
 						</div>
                         <div className="w-full text-right">
                             <a href="https://www.linkedin.com/in/klewwilliams/" target="_blank">
-                                <div className="author">Klew Williams</div>
-                                <div className="role">UX Designer at Finalize, Inc.</div>
+                                <div className="underline">Klew Williams</div>
+                                <div className="underline">UX Designer at Finalize, Inc.</div>
                             </a>
                             <div className="connection">Jezz and Klew were grad students together at Worcester Polytechnic Institute</div>
 					    </div>
@@ -93,9 +93,8 @@ export default function AboutMe() {
 						</div>
                         <div className="w-full text-right">
                             <a href="https://www.linkedin.com/in/chaima-jemmali-732a7655/" target="_blank">
-                                <div className="author">Chaima Jemmali</div>
-                                <div className="role">Former PhD Researcher at Northeastern University</div>
-                                <div className="role">Current Gameplay Engineer at Ubisoft</div>
+                                <div className="underline">Chaima Jemmali</div>
+                                <div className="underline">PhD Researcher at Northeastern University</div>
                             </a>
                             <div className="connection">Jezz and Chaima were grad students together at Worcester Polytechnic Institute</div>
 					    </div>
