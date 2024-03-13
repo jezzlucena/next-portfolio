@@ -218,12 +218,15 @@ const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     }
 ];
 
+/* Fallback hard-coded dummy solution */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(PORTFOLIO_PROJECTS);
 }
 
-// import { MongoClient, ObjectId } from 'mongodb';
-    
+import { MongoClient, ObjectId } from 'mongodb';
+
+/* Solution that uses mongodb free tier,
+ * beware this affordance may expire from time to time */
 // export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 //     const client = new MongoClient(process.env.MONGODB_URI || '');
 

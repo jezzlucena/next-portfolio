@@ -59,6 +59,7 @@ export default function Portfolio() {
             {selectedProject ? 
                 <ProjectModal
                     project={selectedProject} 
+                    size={selectedProject.key === 'dxma' ? 'small' : 'large'}
                     onClose={() => setSelectedProject(undefined)}
                 />
                 : null

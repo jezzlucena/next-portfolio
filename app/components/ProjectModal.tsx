@@ -2,12 +2,14 @@ import Image from 'next/image'
 import { PortfolioProject } from '../project';
 
 export type ProjectModalProps = {
-    project: PortfolioProject
+    size?: 'small' | 'large';
+    project: PortfolioProject;
     onClose: () => void;
 }
 
 export default function ProjectModal(props: ProjectModalProps) {
     const project = props.project;
+    const size = props.size || 'large';
     
     return <>
         <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -28,7 +30,7 @@ export default function ProjectModal(props: ProjectModalProps) {
                     </div>
                     <div className="relative p-6 flex-auto">
                         {project.thumbVideoUrl ? 
-                            <video autoPlay loop muted className="bg-slate-500 w-6/12 m-auto">
+                            <video autoPlay loop muted className={`bg-slate-500 ${size === 'large' ? "w-8/12" : "w-4/12"} m-auto`}>
                                 <source src={project.thumbVideoUrl} />
                             </video>
                         : <Image
