@@ -40,7 +40,7 @@ export default function AboutMe() {
 						</span>
 						<div className="mt-5 text-center">
 							<a 
-								href="/resource/JezzLucenaResume2023.pdf"
+								href="/resource/JezzLucenaResume2024.pdf"
 								target="_blank"
 								className="text-lg px-6 py-4 hover:border-gray-700 hover:bg-gray-100 whitespace-nowrap bg-white border border-gray-500 py-2 px-3 leading-10"
 							>
