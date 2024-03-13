@@ -48,10 +48,12 @@ export default function ProjectModal(props: ProjectModalProps) {
 
                         <span className="leading-10 text-xs">
                             <span className="label">Stack: </span>
-                            {project.stack.map(techName => {
-                                return <><span className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3">{techName}</span><span>, </span></>
+                            {project.stack.map((techName, index) => {
+                                return <>
+                                    <span className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3">{techName}</span>
+                                    {index < project.stack.length-1 && <span className="opacity-0">, </span>}
+                                </>
                             })}
-                            <span className="whitespace-nowrap bg-white border border-gray-700 py-2 px-3">JavaScript</span><span>, </span>
                         </span>
                     </div>
                     <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
