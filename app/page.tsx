@@ -12,7 +12,7 @@ export default function Home() {
     const [selectedPage, setSelectedPage] = useState<PageType>("portfolio");
     
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 md:p-12 p-6 mt-6 w-full">
+        <main className="flex min-h-screen flex-col items-center justify-between lg:py-24 md:py-12 py-6 lg:mt-6 mt-24 w-full">
             {selectedPage === "portfolio" && <Portfolio />}
             {selectedPage === "about" && <AboutMe />}
 
