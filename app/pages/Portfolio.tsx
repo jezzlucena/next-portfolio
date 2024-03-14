@@ -177,7 +177,7 @@ export default function Portfolio() {
                 />
             </div>
         
-            <div className="mt-24 mb-32 grid text-center md:text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 md:grid-cols-2 lg:text-left lg:px-24 md:px-12 px-6">
+            <div className="mt-24 mb-32 grid text-center md:text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 md:grid-cols-2 lg:text-left">
                 {projects ? projects.map(project => {
                         return (
                             <GridProject
