@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 
-const useScroll = (wait: number = 0) => {
+const useWindowScroll = (wait: number = 0) => {
   const [scrollY, setScrollY] = useState(0);
-  const throttleTimeout = useRef<number | null>(null);
+  const throttleTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const callBack = useCallback(() => {
     setScrollY(window.pageYOffset);
@@ -14,9 +14,7 @@ const useScroll = (wait: number = 0) => {
   useEffect(() => {
     const updatePosition = () => {
       if (wait) {
-        if (!throttleTimeout.current) {
-          throttleTimeout.current = setTimeout(callBack, wait);
-        }
+        if (!throttleTimeout.current) throttleTimeout.current = setTimeout(callBack, wait);
       } else {
         callBack();
       }
@@ -31,4 +29,4 @@ const useScroll = (wait: number = 0) => {
   return { scrollY, isScrolled: scrollY > 0};
 };
 
-export default useScroll;
+export default useWindowScroll;

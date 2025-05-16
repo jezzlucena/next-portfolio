@@ -1,0 +1,138 @@
+.toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform-origin: right center;
+  transform: translateY(-50%);
+  display: flex;
+  cursor: pointer;
+
+  .icon {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    border: 2px solid black;
+    margin: 0;
+    margin-right: -2px;
+    background-color: #aaa;
+    transition: 0.6s background-color ease, 0.2s box-shadow ease, 0.2s transform ease;
+
+    &:hover, &.hovered {
+      box-shadow: 7px 7px 0 -1px rgba(0, 0, 0, 1);
+      transform: translate(-3px, -3px);
+    }
+    
+    .symbol {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 50%;
+      width: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .symbol::before,
+    .symbol::after {
+      content: '';
+      position: absolute;
+      background: black;
+    }
+
+    &.columns .symbol::before,
+    &.columns .symbol:after {
+      left: 0.5px;
+      width: 5.5px;
+    }
+
+    &.columns .symbol::before {
+      top: 0;
+      height: 7px;
+      box-shadow: 7.5px 13.5px 0 0 black, 15px 0 0 0 black;
+    }
+
+    &.columns .symbol::after {
+      bottom: 0;
+      height: 11px;
+      box-shadow: 7.5px -9.5px 0 0 black, 15px 0 0 0 black;
+    }
+
+    &.list .symbol::before,
+    &.list .symbol::after {
+      height: 4.5px;
+      box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+    }
+
+    &.list .symbol::before {
+      left: 0;
+      width: 4px;
+    }
+
+    &.list .symbol::after {
+      right: 0;
+      width: calc(100% - 6px);
+    }
+  }
+
+  &.show {
+    &.list .icon.list, &.columns .icon.columns {
+      background-color: white;
+    }
+  }
+}
+
+.gallery {
+  opacity: 0;
+  transition: 0.5s opacity ease;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  overflow: visible;
+
+  &.show {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+
+  &.list {
+    flex-direction: column;
+
+    .thumbContainer {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  .column {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery {
+    gap: 10px;
+  }
+}
+
+.masonryItem {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.masonryActive {
+  .masonryItem {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s transform ease;
+  }
+
+  .layoutItem {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .content .title {
+    text-align: left;
+  }
+}

@@ -1,0 +1,46 @@
+.keywords {
+  font-family: opensans;
+  letter-spacing: 2px;
+  margin-right: 5px;
+  font-size: 0;
+  color: white;
+
+  .label, .keyword {
+    color: black;
+  }
+
+  .label, .keyword {
+    font-size: 14px;
+  }
+
+  @media (max-width: 640px) {
+    .label, .keyword {
+      font-size: 12px;
+    }
+  }
+
+  .label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    font-family: myriad-boldcond;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+
+  .keyword {
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 0;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    border: 2px solid black;
+    padding: 3px 15px;
+
+    &:not(:last-child)::after {
+      content: ',';
+      font-size: 0;
+    }
+  }
+}

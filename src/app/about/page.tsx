@@ -1,103 +1,86 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+import { useState } from "react"
+import styles from "./About.module.scss"
+import Link from "next/link";
+import { PROFILE_KEYWORDS } from "../utils/constants";
+import Button from "../components/Button";
+import Heading from "../components/Heading";
+import Keywords from "../components/Keywords";
+import Testimonial from "../components/Testimonial";
+
+/**
+ * Page that displays details about Jezz's career, including testimonials from former
+ * coworkers and academic partners
+ */
+export default function About() {
+  const [isTextCollapsed, setTextCollapsed] = useState(true);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/about/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className={`${styles.content} relative bg-white`}>
+      <div className={`${styles.anchor} absolute -top-[60px]`} id="content"></div>
+        <div className="w-[100%] mx-auto py-[30px] px-[20px] md:px-[30px] lg:px-[50px]">
+          <div className={`${styles.aboutContainer}`}>
+            <div className={`${styles.description}`}>
+              <Link className={`${styles.profilePicture}`} target="_blank" href="http://linkedin.com/in/jezzlucena" />
+              <Link target="_blank" href="http://linkedin.com/in/jezzlucena">
+                <div className={`${styles.profileName}`}>Jezz Lucena</div>
+                <div className={`${styles.profileTitle}`}>Full Stack Engineer</div>
+              </Link>
+              
+              <Keywords label="Keywords" keywords={PROFILE_KEYWORDS} />
+            </div>
+          </div>
+          <div className={`${styles.textContainer} relative ${isTextCollapsed ? styles.collapsed : "" }`}>
+            <p className={styles.paragraph}>Building magical end-user experiences is my true passion. I actively seek out new technologies, and stay up-to-date on the industry&apos;s most recent frameworks, languages and trends.</p>
+            <p className={styles.paragraph}>With a Bachelor’s degree in Computer Engineering and a Master’s degree in Interactive Media & Game Development, continued education has allowed me to stay ahead of the curve and deliver exceptional work to each employer I’ve worked for - both full-time and contract.</p>
+            <p className={styles.paragraph}>My technical expertise includes cross-platform proficiency (Mac OS, Unix, Linux and Windows); experience with 13 scripting/programming languages (including ES6, CSS3, HTML5, Phoenix/Elixir and PostgreSQL); and advanced knowledge of developer applications, tools, methodologies and best practices (including OOD, client/server architecture and self-test automation).</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className={`${styles.readMoreContainer}`}>
+              <Button
+                className={ styles.button }
+                onClick={() => setTextCollapsed(!isTextCollapsed)}
+              >{isTextCollapsed ? "Read More" : "Collapse"}</Button>
+            </div>
+          </div>
+          <div style={{ clear: "both" }}></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className={ styles.testimonials }>
+          <Heading>Testimonials</Heading>
+
+          <div className={styles.container}>
+            <Testimonial
+              href="https://www.linkedin.com/in/chrisebennett/"
+              author="Chris Bennet"
+              role="CEO at Wonderschool, Inc."
+              connection="Chris was senior to Jezz at Wonderschool"
+            >
+              <p className={styles.paragraph}>Working with Jezz was a pleasure. His creative, detail oriented approach was very valuable in the product creation process at Wonderschool. I found it rare and rewarding to work with engineer who could think about the full stack of development while also empathizing with the customers needs.</p>
+            </Testimonial>
+
+            <Testimonial
+              href="https://www.linkedin.com/in/klewstill/"
+              author="Klew Still"
+              role="UX Designer at Finalize, Inc."
+              connection="Jezz and Klew were grad students together at Worcester Polytechnic Institute"
+            >
+              <p className={styles.paragraph}>Jezz and I studied together at Worcester Polytechnic Institute for our MS in Interactive Media and Game Development where we worked together on projects.</p>
+              <p className={styles.paragraph}>Jezz is a phenomenal worker and a phenomenal personality to work with. He has a broad base of talents, particularly engineering, writing, design, and criticism, and is a truly deep thinker who is easy to collaborate on and passionate about positivity, authenticity, and morality in the work place.</p>
+              <p className={styles.paragraph}>The best thing about Jezz as a worker is that he has true, raw talent that he&apos;s honed with practice and that he is deeply focused on making positive changes in his community and his industry with that talent and practice. He seeks to learn about others, to understand the theory behind his work, and to act beyond himself. This reflects WPI&apos;s motto, &quot;Theory and Practice&quot; which Jezz has truly exemplified in his academic and personal projects.</p>
+            </Testimonial>
+
+
+            <Testimonial
+              href="https://www.linkedin.com/in/chaima-jemmali-732a7655/"
+              author="Chaima Jemmali"
+              role="PhD Researcher at Northeastern University"
+              connection="Jezz and Chaima were grad students together at Worcester Polytechnic Institute"
+            >
+              <p className={styles.paragraph}>Jezz is not only an excellent programmer with technical skills covering multiple languages, platforms and engines, he is also a creative thinker and designer always looking for new ideas and projects. As an active learner, he is continuously taking on new challenges to harness his skills and acquire new ones.</p>
+            </Testimonial>
+          </div>
+      </div>
     </div>
   );
 }

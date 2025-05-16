@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import useScroll from "../hooks/useWindowScroll";
+import useWindowScroll from "../hooks/useWindowScroll";
 import { debounce } from "lodash";
 import useEventListener from "../hooks/useEventListener";
 import styles from "./TobBar.module.scss"
@@ -13,7 +13,7 @@ import { usePathname } from "next/navigation";
  * Top Bar used for navigation, to be imported on every page
  */
 export default function TopBar() {
-  const { isScrolled } = useScroll();
+  const { isScrolled } = useWindowScroll();
   const [isNavOpen, setNavOpen] = useState(false);
   const pathname = usePathname();
 
