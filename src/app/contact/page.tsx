@@ -70,13 +70,13 @@ export default function Contact() {
   }
 
   useEffect(() => {
-    document.title = 'Contact - Jezz Lucena';
+    if (typeof document !== 'undefined') document.title = 'Contact - Jezz Lucena';
   }, []);
 
   return (
     <>
       <Head>
-        <title>{document?.title}</title>
+        <title>Contact - Jezz Lucena</title>
       </Head>
       <div className={`${styles.content} relative bg-white`}>
         <div className="absolute -top-[60px]" id="content"></div>
