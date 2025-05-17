@@ -15,7 +15,7 @@
   background-color: white;
   transition: 0.2s box-shadow ease, 0.2s transform ease;
 
-  &:hover, &.hovered {
+  &:hover, &:global(.hovered) {
     box-shadow: 7px 7px 0 -1px rgba(0, 0, 0, 1);
     transform: translate(-3px, calc(-50% - 3px));
   }

@@ -7,7 +7,7 @@
   width: 100%;
 	transition: 0.2s box-shadow ease, 0.2s transform ease;
 
-  &:hover, &.hovered {
+  &:hover, &:global(.hovered) {
     box-shadow: 7px 7px 0 -1px rgba(0, 0, 0, 1);
     transform: translate(-3px, -3px);
   }
@@ -84,7 +84,7 @@
       }
 
       &:not(.noVideo):hover .thumbContainer .thumb,
-      &:not(.noVideo).hovered .thumbContainer .thumb {
+      &:not(.noVideo):global(.hovered) .thumbContainer .thumb {
         opacity: 0;
         transition-delay: 0s;
       }

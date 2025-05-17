@@ -49,7 +49,7 @@
   }
 
   &:hover .connection,
-  &.hovered .connection {
+  &:global(.hovered) .connection {
     opacity: 1;
   }
 }
