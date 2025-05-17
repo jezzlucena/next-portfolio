@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Privacy Policy - Jezz Lucena',
+};
+
 export default function PrivacyPage() {
   return (
     <div className="content relative bg-white">

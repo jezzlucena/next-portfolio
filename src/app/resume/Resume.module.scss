@@ -1,0 +1,31 @@
+
+.pdfContainer {
+  padding-bottom: calc(129% + 56px);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  height: 45px;
+  width: 45px;
+  border: 2px solid black;
+  margin: 0;
+  background-color: white;
+  transition: 0.2s box-shadow ease, 0.2s transform ease;
+
+  &:hover, &.hovered {
+    box-shadow: 7px 7px 0 -1px rgba(0, 0, 0, 1);
+    transform: translate(-3px, calc(-50% - 3px));
+  }
+  
+  .symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

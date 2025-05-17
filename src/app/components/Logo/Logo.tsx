@@ -2,9 +2,9 @@
 
 import Link from "next/link"
 import { useCallback, useEffect, useRef } from "react";
-import useWindowScroll from "../hooks/useWindowScroll";
+import useWindowScroll from "../../hooks/useWindowScroll";
 import styles from "./Logo.module.scss"
-import useTabActive from "../hooks/useTabActive";
+import useTabActive from "../../hooks/useTabActive";
 
 const SVG_STYLE_CYCLES = [
   'opacity: 1;',

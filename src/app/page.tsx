@@ -2,8 +2,8 @@
 
 import { useRef, useState } from "react";
 import styles from "./Portfolio.module.scss"
-import Heading from "./components/Heading";
-import ProjectGallery from "./components/ProjectGallery";
+import Heading from "./components/Heading/Heading";
+import ProjectGallery from "./components/ProjectGallery/ProjectGallery";
 
 export default function Portfolio() {
   const [galleryMode, setGalleryMode] = useState<'columns' | 'list'>('columns');

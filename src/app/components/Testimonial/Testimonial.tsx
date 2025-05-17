@@ -27,14 +27,12 @@ export default function Testimonial({
         <div className={`${styles.quote}`}>
           { children }
         </div>
-        <Link href={href} target="_blank">
-          <div className={`${styles.author}`}>
-            - { author }
-          </div>
-          <div className={`${styles.role}`}>
-            { role }
-          </div>
-        </Link>
+        <div className={`${styles.author}`}>
+          - { author }
+        </div>
+        <div className={`${styles.role}`}>
+          { role }
+        </div>
         <div className={`${styles.connection}`}>
           { connection }
         </div>

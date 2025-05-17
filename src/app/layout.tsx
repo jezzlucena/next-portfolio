@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import TopBar from "./components/TopBar";
-import Logo from "./components/Logo";
+import TopBar from "./components/TopBar/TopBar";
+import Logo from "./components/Logo/Logo";
 import styles from "./layout.module.scss"
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jezz Lucena's Portfolio",
+  title: "Portfolio - Jezz Lucena",
   description: "An online portfolio, coded in NextJS",
 };
 

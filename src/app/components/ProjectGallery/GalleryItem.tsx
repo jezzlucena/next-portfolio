@@ -1,8 +1,8 @@
 'use client'
 
 import { Ref, useEffect, useRef, useState } from 'react';
-import type { Project } from '../types/Project';
-import useVisibility from '../hooks/useVisibility';
+import type { Project } from '../../types/Project';
+import useVisibility from '../../hooks/useVisibility';
 import Link from 'next/link';
 import styles from './GalleryItem.module.scss'
 import Image from 'next/image';

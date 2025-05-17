@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Footer.module.scss"
-import Button from "./Button";
+import Button from "../Button/Button";
 
 /**
  * Component that displays the footer, to be imported in every page

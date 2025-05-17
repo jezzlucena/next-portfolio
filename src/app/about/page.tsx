@@ -4,10 +4,10 @@ import { useState } from "react"
 import styles from "./About.module.scss"
 import Link from "next/link";
 import { PROFILE_KEYWORDS } from "../utils/constants";
-import Button from "../components/Button";
-import Heading from "../components/Heading";
-import Keywords from "../components/Keywords";
-import Testimonial from "../components/Testimonial";
+import Button from "../components/Button/Button";
+import Heading from "../components/Heading/Heading";
+import Keywords from "../components/Keywords/Keywords";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 /**
  * Page that displays details about Jezz's career, including testimonials from former

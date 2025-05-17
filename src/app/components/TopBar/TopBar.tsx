@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from "react";
-import useWindowScroll from "../hooks/useWindowScroll";
+import useWindowScroll from "../../hooks/useWindowScroll";
 import { debounce } from "lodash";
-import useEventListener from "../hooks/useEventListener";
+import useEventListener from "../../hooks/useEventListener";
 import styles from "./TobBar.module.scss"
 import Link from "next/link";
 import Image from "next/image";
@@ -74,7 +74,7 @@ export default function TopBar() {
               href="/resume#content"
               className={`${styles.link} ${pathname.startsWith('/resume') ? styles.routerLinkActive : ""}`}
               onClick={() => setNavOpen(false)}
-            >Resume</Link>
+            >Resumé</Link>
             <Link
               href="/contact#content"
               className={`${styles.link} ${pathname.startsWith('/contact') ? styles.routerLinkActive : ""}`}

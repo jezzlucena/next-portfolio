@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Terms & Conditions - Jezz Lucena',
+};
+
 export default function TermsPage() {
   return (
     <div className="content relative bg-white">

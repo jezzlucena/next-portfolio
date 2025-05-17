@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import useWindowScroll from '../hooks/useWindowScroll';
-import PROJECTS from '../json/projects';
+import useWindowScroll from '../../hooks/useWindowScroll';
+import PROJECTS from '../../json/projects';
 import { debounce } from 'lodash';
 // import useEventListener from '../hooks/useEventListener';
 import styles from './ProjectGallery.module.scss'

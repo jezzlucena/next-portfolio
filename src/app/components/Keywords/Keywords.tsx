@@ -16,7 +16,7 @@ export default function Keywords({ label, keywords }: KeywordsProps) {
     <span className={`${styles.keywords}`}>
       <span className={`${styles.label} big`}>{ label }</span>
       {keywords.map(keyword => (
-        <span className={`${keyword}`} key={keyword}>{ keyword }</span>
+        <span className={`${styles.keyword}`} key={keyword}>{ keyword }</span>
       ))}
     </span>
   );
