@@ -44,11 +44,7 @@ export default function Contact() {
         }
       );
 
-      const text = await response.text();
-
-      console.log(response.status, text);
-
-      if (response) {
+      if (response?.status === 200) {
         setStatus("success");
         setResult("Thank you for reaching out!");
       } else {

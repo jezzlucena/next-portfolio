@@ -38,7 +38,6 @@ export default function ProjectGallery({ galleryMode, isShowingGallery, resizeCo
     const galleryBox = document.querySelector('.gallery')?.getBoundingClientRect();
     document.querySelectorAll('.column .item').forEach(item => {
       const masonryItem = document.querySelector(`.masonryItem[data-key=${item.getAttribute('data-key')}]`);
-      console.log(masonryItem);
       const itemBox = item.getBoundingClientRect();
       const roundedBox = {
         height: Math.round(itemBox.height * 10) / 10,
@@ -73,7 +72,9 @@ export default function ProjectGallery({ galleryMode, isShowingGallery, resizeCo
     setTimeout(handleMasonryLayout, 0);
   }, 100);
 
-  useEffect(handleWindowResize, [resizeCount]);
+  useEffect(() => {
+    handleWindowResize()
+  }, [resizeCount, handleWindowResize]);
 
   useEffect(() => {
     handleWindowResize();
