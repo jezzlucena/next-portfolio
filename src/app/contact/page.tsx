@@ -27,7 +27,7 @@ export default function Contact() {
     phone: "",
     subject: "",
     message: "",
-    source: process.env.NEXT_SOURCE || "next"
+    source: process.env.NEXT_PUBLIC_SOURCE || "next"
   });
 
   const handleSubmit = async () => {
@@ -36,13 +36,17 @@ export default function Contact() {
     
     try {
       const response = await fetch(
-        `${process.env.NEXT_BACKEND_URL}/contact`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/contact`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(form),
         }
       );
+
+      const text = await response.text();
+
+      console.log(response.status, text);
 
       if (response) {
         setStatus("success");
@@ -60,7 +64,7 @@ export default function Contact() {
         phone: "",
         subject: "",
         message: "",
-        source: process.env.NEXT_SOURCE || "next"
+        source: process.env.NEXT_PUBLIC_SOURCE || "next"
       });
     } catch (error) {
       setStatus("error");
