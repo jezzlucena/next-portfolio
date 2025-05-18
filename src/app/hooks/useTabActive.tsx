@@ -12,7 +12,7 @@ const useTabActive = () => {
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange)
     }
-  }, []);
+  }, [handleVisibilityChange]);
 
   return visibilityState;
 }
