@@ -4,7 +4,7 @@ services:
   frontend:
     build: ./
     volumes:
-      ./:/app
+      - ./:/app
     ports:
       - 8086:8086
     restart: always
