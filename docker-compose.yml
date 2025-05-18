@@ -3,8 +3,6 @@ name: next-portfolio
 services:
   frontend:
     build: ./
-    volumes:
-      - ./:/app
     ports:
       - 8086:8086
     restart: always
