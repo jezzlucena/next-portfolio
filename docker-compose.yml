@@ -2,7 +2,8 @@ name: next-portfolio
 
 services:
   frontend:
-    build: ./
+    env_file:
+      - .env
     ports:
       - 8086:8086
     restart: always
