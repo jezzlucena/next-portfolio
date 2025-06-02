@@ -1,8 +1,8 @@
 import "./globals.css";
 import Footer from "../../components/Footer/Footer";
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 import Header from "@/components/Header/Header";
 
 export default async function RootLayout({
