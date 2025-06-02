@@ -1,10 +1,10 @@
 'use client'
 
-import "./globals.css";
-import portfolioStyles from "./Portfolio.module.scss"
+import "./[locale]/globals.css";
+import portfolioStyles from "./[locale]/Portfolio.module.scss"
 import Link from "next/link";
-import Heading from "../../components/Heading/Heading";
-import Button from "../../components/Button/Button";
+import Heading from "../components/Heading/Heading";
+import Button from "../components/Button/Button";
 import { useEffect } from "react";
 import Head from "next/head";
 

@@ -48,7 +48,7 @@ export default function GalleryItem({ project, projectKey, galleryMode }: Galler
     <Link
       ref={currentElement as unknown as Ref<HTMLAnchorElement> | undefined}
       href={`/projects/${projectKey}#content`}
-      className={`item trigger mb-[10px] md:mb-[20px] ${styles.item} ${galleryMode === 'columns' ? styles.columns : styles.list} ${isTriggered ? styles.triggered : ""} ${!project.videoUrl && !project.thumbGifUrl ? styles.noVideo : ""}`}
+      className={`item trigger mb-[10px] md:mb-[20px] ${styles.item} ${galleryMode === 'columns' ? styles.columns : styles.list} ${isTriggered ? styles.triggered : ""} ${(!project.thumbVideoUrl && !project.thumbGifUrl) ? styles.noVideo : ""}`}
       data-key={projectKey}
       onMouseEnter={playVideo}
       onMouseLeave={pauseVideo}
