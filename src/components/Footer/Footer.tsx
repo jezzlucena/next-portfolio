@@ -33,6 +33,12 @@ export default function Footer() {
           <div className={styles.emailText}>
             {t("footer.orDirectly")} <b><u><a href="mailto:jezzlucena@gmail.com">jezzlucena@gmail.com</a></u></b>
           </div>
+
+          <br/>
+
+          <Link href="https://jezzlucena.com">
+            <Button theme="light" className={ styles.button }>{t("common.switchToNuxt")}</Button>
+          </Link>
         </div>
       </div>
 

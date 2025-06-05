@@ -5,7 +5,9 @@
     "about": "Sobre",
     "portfolio": "Portfólio",
     "resume": "Currículo",
-    "contact": "Contato"
+    "contact": "Contato",
+    "switchToNuxt": "Mudar para Nuxt / Vue 3",
+    "switchToNext": "Mudar para Next.js / React"
   },
   "home": {
     "myWork": "Meu Trabalho"

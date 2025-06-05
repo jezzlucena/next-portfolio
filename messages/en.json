@@ -5,7 +5,9 @@
     "about": "About",
     "portfolio": "Portfolio",
     "resume": "Resumé",
-    "contact": "Contact"
+    "contact": "Contact",
+    "switchToNuxt": "Switch to Nuxt / Vue 3",
+    "switchToNext": "Switch to Next.js / React"
   },
   "home": {
     "myWork": "Some of my work"
